@@ -3,16 +3,32 @@
 -- fastn.package: meenukumari28.github.io/galaxia
 favicon: /-/meenukumari28.github.io/galaxia/favicon.ico
 
--- fastn.dependency: fastn-community.github.io/doc-site as doc-site
--- fastn.dependency: fastn-community.github.io/footer
--- fastn.dependency: fastn-community.github.io/roboto-typography
+-- fastn.dependency: fastn-community.github.io/midnight-storm
+-- fastn.dependency: meenukumari28.github.io/galaxia-cs
+-- fastn.dependency: fastn-community.github.io/bling
 
 -- fastn.auto-import: meenukumari28.github.io/galaxia/FASTN/ds
 -- fastn.auto-import: meenukumari28.github.io/galaxia/assets
--- fastn.auto-import: doc-site
+-- fastn.auto-import: meenukumari28.github.io/galaxia/common
 
 -- fastn.sitemap:
 
-# Home: index.html
+# Blog: index.html
 
-- Right Sidebar Sample: /sidebar/
+# Docs: /components/
+- Components: /components/
+  - author-bio: /components/author-bio/
+  skip: true
+  - featured-post: /components/featured-post/
+  skip: true
+  - post: /components/post/
+  skip: true
+  - post-card: /components/post-card/
+  skip: true
+  - posts: /components/posts/
+  skip: true
+  - search-card: /components/search-card/
+  skip: true
+  - topic: /components/topic/
+  skip: true
+
