@@ -74,7 +74,6 @@ cta-secondary: $featured-post.cta-secondary
 cta-secondary-url: $featured-post.cta-secondary-url
 link: $featured-post.link
 
-
 -- end: ftd.column
 
 -- end: featured-post

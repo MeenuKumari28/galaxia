@@ -19,22 +19,22 @@ string tag-link:
 -- tags-list list topic-lists:
 
 -- tags-list: Lorem1
-tag-link: /
+tag-link: blog-articles/sample-post-1/
 
 -- tags-list: Lorem2
-tag-link: /
+tag-link: blog-articles/sample-post-1/
 
 -- tags-list: Lorem3
-tag-link: /
+tag-link: blog-articles/sample-post-1/
 
 -- tags-list: Lorem4
-tag-link: /
+tag-link: blog-articles/sample-post-1/
 
 -- tags-list: Lorem5
-tag-link: /
+tag-link: blog-articles/sample-post-1/
 
 -- tags-list: Lorem6
-tag-link: /
+tag-link: blog-articles/sample-post-1/
 
 -- end: topic-lists
 
@@ -66,19 +66,19 @@ optional author-meta author:
 -- social-media list share-links:
 
 -- social-media:
-link: /
+link: index.html
 src: $assets.files.assets.meta.svg
 
 -- social-media: 
-link: /
+link: index.html
 src: $assets.files.assets.figma.svg
 
 -- social-media:
-link: /
+link: index.html
 src: $assets.files.assets.google.svg
 
 -- social-media: 
-link: /
+link: index.html
 src: $assets.files.assets.ball.svg
 
 -- end: share-links
