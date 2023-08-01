@@ -1,0 +1,146 @@
+-- import: meenukumari28.github.io/galaxia/blog-authors/pema
+
+-- common.post-meta meta: Lorem ipsum dolor sit amet. Est voluptatem esse ipsum dolor sit amet
+tag: Lorem ipsum
+author: $pema.pema
+published-on: Jul 19, 2023
+post-image: $assets.files.assets.img.png
+post-url: blog-articles/sample-post-1/
+
+-- common.post-meta meta1: Quo praesentium sapiente vel soluta assumenda et
+tag: Lorem ipsum
+author: $pema.pema
+published-on: Jul 19, 2023
+post-image: $assets.files.assets.featured-1.jpg
+post-url: blog-articles/sample-post-1/
+
+Lorem ipsum dolor sit amet. Aut doloremque earum et nihil ducimus sit facere
+ratione ab sint doloremque. Id minima tempora aut optio rerum
+
+-- common.post-meta meta2: Eos libero natus est minima laudantium minima
+tag: Lorem ipsum
+author: $pema.pema
+published-on: Jul 19, 2023
+post-image: $assets.files.assets.blog2.jpg
+post-url: blog-articles/sample-post-1/
+
+Lorem ipsum dolor sit amet. Aut doloremque earum et nihil ducimus sit facere
+ratione ab sint doloremque. Id minima tempora aut optio rerum
+
+
+
+-- ds.page:
+full-width: true
+sidebar: false
+
+-- ds.post:
+meta: $meta
+
+-- ds.markdown:
+
+Lorem ipsum dolor sit amet. Est voluptatem esse ea repellat facere ut itaque
+labore ex quaerat error et distinctio reiciendis? Quo praesentium sapiente vel
+soluta assumenda et omnis doloremque est beatae voluptatem! 
+
+-- ds.h2: Working remotely as a digital nomad in Honduras
+
+-- ds.markdown:
+
+Ad quam tenetur est repellendus dicta vel voluptas omnis ut alias galisum! In
+laborum animi eum repellat ullam non temporibus delectus.Eos libero natus est
+minima laudantium hic dolor maxime et necessitatibus voluptatem. Sed
+accusantium magnam sed earum voluptatum quo mollitia voluptatem quo provident
+aliquid. Ad quam tenetur est repellendus dicta vel voluptas omnis ut alias
+galisum! In laborum animi eum repellat ullam non temporibus delectus.Eos libero
+natus est minima laudantium hic dolor maxime et necessitatibus voluptatem. Sed
+accusantium magnam sed earum voluptatum quo mollitia voluptatem quo provident
+aliquid.
+
+-- ds.h2: Roatan Island as a digital nomad base
+
+-- ds.markdown:
+
+Ad quam tenetur est repellendus dicta vel voluptas omnis ut alias galisum! In
+laborum animi eum repellat ullam non temporibus delectus.Eos libero natus est
+minima laudantium hic dolor maxime et necessitatibus voluptatem. Sed
+accusantium magnam sed earum voluptatum quo mollitia voluptatem quo provident
+aliquid. Ad quam tenetur est repellendus dicta vel voluptas omnis ut alias
+galisum! 
+
+In laborum animi eum repellat ullam non temporibus delectus.Eos libero
+natus est minima laudantium hic dolor maxime et necessitatibus voluptatem. Sed
+accusantium magnam sed earum voluptatum quo mollitia voluptatem quo provident
+aliquid.
+
+Quo praesentium sapiente vel soluta assumenda et omnis doloremque est beatae
+voluptatem! Eum delectus dolorum et animi consectetur est asperiores tempore
+rem inventore nihil.Quo praesentium sapiente vel soluta assumenda et omnis
+doloremque est beatae voluptatem! Eum delectus dolorum et animi consectetur est
+asperiores tempore rem inventore nihil.Quo praesentium sapiente vel soluta
+assumenda et omnis doloremque est beatae voluptatem! Eum delectus dolorum et
+animi consectetur est asperiores tempore rem inventore nihil.
+
+-- ds.image:
+src: $assets.files.assets.img2.png
+
+-- ds.markdown:
+
+`Activities in Roatan`
+
+Ad quam tenetur est repellendus dicta vel voluptas omnis ut alias galisum! In
+laborum animi eum repellat ullam non temporibus delectus.Eos libero natus est
+minima laudantium hic dolor maxime et necessitatibus voluptatem. Sed
+accusantium magnam sed earum voluptatum quo mollitia voluptatem quo provident
+aliquid. Ad quam tenetur est repellendus dicta vel voluptas omnis ut alias
+galisum! 
+
+In laborum animi eum repellat ullam non temporibus delectus.Eos libero
+natus est minima laudantium hic dolor maxime et necessitatibus voluptatem. Sed
+accusantium magnam sed earum voluptatum quo mollitia voluptatem quo provident
+aliquid.
+
+-- ds.h2: Coworking in Roatan
+
+-- ds.markdown:
+
+In laborum animi eum repellat ullam non temporibus delectus.Eos libero
+natus est minima laudantium hic dolor maxime et necessitatibus voluptatem. Sed
+accusantium magnam sed earum voluptatum quo mollitia voluptatem quo provident
+aliquid.
+
+-- ds.image:
+src: $assets.files.assets.img3.png
+
+-- ds.markdown:
+
+Along with fast Wifi and great amenities, Beach Desk had incredible views of the
+Ad quam tenetur est repellendus dicta vel voluptas omnis ut alias galisum! In
+laborum animi eum repellat ullam non temporibus delectus.Eos libero natus est
+minima laudantium hic dolor maxime et necessitatibus voluptatem. Sed
+accusantium magnam sed earum voluptatum quo mollitia voluptatem quo provident
+aliquid. Ad quam tenetur est repellendus dicta vel voluptas omnis ut alias
+galisum! Ad quam tenetur est repellendus dicta vel voluptas omnis ut alias
+galisum! In laborum animi eum repellat ullam non temporibus delectus.Eos libero
+natus est minima laudantium hic dolor maxime et necessitatibus voluptatem. Sed
+accusantium magnam sed earum voluptatum quo mollitia voluptatem quo provident
+aliquid. Ad quam tenetur est repellendus dicta vel voluptas omnis ut alias
+galisum! 
+
+-- ds.image:
+src: $assets.files.assets.img4.png
+
+-- ds.h2: Wrap-Up: Life as a Digital Nomad in Roatan
+
+-- ds.markdown:
+
+Quo praesentium sapiente vel soluta assumenda et omnis doloremque est beatae
+voluptatem! Eum delectus dolorum et animi consectetur est asperiores tempore
+rem inventore nihil.Quo praesentium sapiente vel soluta assumenda et omnis
+doloremque est beatae voluptatem! Eum delectus dolorum et animi consectetur est
+asperiores tempore rem inventore nihil.Quo praesentium sapiente vel soluta
+assumenda et omnis doloremque est beatae voluptatem! Eum delectus dolorum et
+animi consectetur est asperiores tempore rem inventore nihil.
+
+-- end: ds.post
+
+-- end: ds.page
