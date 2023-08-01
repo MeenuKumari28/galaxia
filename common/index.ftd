@@ -19,22 +19,22 @@ string tag-link:
 -- tags-list list topic-lists:
 
 -- tags-list: Lorem1
-tag-link: blog-articles/sample-post-1/
+tag-link: index.html
 
 -- tags-list: Lorem2
-tag-link: blog-articles/sample-post-1/
+tag-link: index.html
 
 -- tags-list: Lorem3
-tag-link: blog-articles/sample-post-1/
+tag-link: index.html
 
 -- tags-list: Lorem4
-tag-link: blog-articles/sample-post-1/
+tag-link: index.html
 
 -- tags-list: Lorem5
-tag-link: blog-articles/sample-post-1/
+tag-link: index.html
 
 -- tags-list: Lorem6
-tag-link: blog-articles/sample-post-1/
+tag-link: index.html
 
 -- end: topic-lists
 
