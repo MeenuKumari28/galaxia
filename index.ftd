@@ -15,6 +15,9 @@ To learn more about posts page - [Click here](components/).
 -- posts: Blog
 bg-img: $assets.files.assets.bg.png
 
+-- topic:
+topics: $common.topic-lists
+
 -- post-card:
 post-data: $sample-post-1.meta1
 
@@ -314,6 +317,7 @@ image: $post.meta.post-image
 author: $post.meta.author
 timestamp: $post.meta.published-on
 tag: $post.meta.tag
+container: $post.container
 
 -- ftd.column:
 children: $post.container
@@ -390,56 +394,46 @@ optional string tag:
 
 -- ftd.column:
 width: fill-container
-spacing.fixed.px: 36
-role: $inherited.types.copy-regular
-
--- ftd.row:
-width.fixed.px: 92
-padding-vertical.px: 8
-padding-horizontal.px: 16
-align-content: center
-border-radius.px: 20
-spacing.fixed.px: 10
-background.solid: $inherited.colors.background.step-1
-link: index.html
-color: $inherited.colors.text
-
--- ftd.text: <
-
--- ftd.text: Back
-
--- end: ftd.row
-
--- ftd.row:
-width: fill-container
-spacing: space-between
-
--- ftd.column:
-width if { article-card-desktop.image == NULL }: fill-container
-width.fixed.px: 480
 spacing.fixed.px: 24
+role: $inherited.types.copy-small
 
 -- ftd.text: $article-card-desktop.tag
 if: { article-card-desktop.tag != NULL }
+role: $inherited.types.copy-small
+color: $inherited.colors.cta-primary.text
+background.solid: $inherited.colors.cta-primary.base
+padding-horizontal.px: 8
 style: bold
-color: $inherited.colors.cta-danger.focused
 
 -- ftd.text: $article-card-desktop.title
 role: $inherited.types.heading-large
 color: $inherited.colors.text-strong
 
 -- ftd.row:
+width: fill-container
+spacing: space-between
+
+-- ftd.row:
 spacing.fixed.px: 8
 color: $inherited.colors.text
+align-content: center
 
--- ftd.text: by
+-- ftd.image: 
+if: { article-card-desktop.author.image != NULL }
+src: $article-card-desktop.author.image
+align-self: center
+height.fixed.px: 56
+width.fixed.px: 56
+
+-- ftd.column:
 
 -- ftd.text: $article-card-desktop.author.title
 
--- end: ftd.row
+-- ftd.text: $article-card-desktop.author.profile
 
--- ftd.row:
-spacing.fixed.px: 24
+-- end: ftd.column
+
+-- end: ftd.row
 
 -- ftd.row:
 if: { article-card-desktop.timestamp != NULL }
@@ -456,17 +450,13 @@ color: $inherited.colors.text
 
 -- end: ftd.row
 
--- end: ftd.column
+-- end: ftd.row
 
 -- ftd.image:
 if: { article-card-desktop.image != NULL }
 src: $article-card-desktop.image
 height.fixed.px: 350
-border-radius.px: 14
-border-width.px: 2
-border-color: $inherited.colors.cta-danger.focused
-
--- end: ftd.row
+width: fill-container
 
 -- end: ftd.column
 
@@ -602,6 +592,8 @@ z-index: 5
 width.fixed.px: 250
 text-align: center
 
+-- search-card:
+
 -- end: ftd.column
 
 -- ftd.text: $posts.title
@@ -616,7 +608,7 @@ text-align: center
 -- ftd.row:
 children: $posts.container
 wrap: true
-spacing.fixed.px: 48
+spacing.fixed.px: 50
 
 -- end: ftd.row
 
@@ -685,6 +677,7 @@ image: $post-card-ui.image
 author: $post-card-ui.author
 url: $post-card-ui.url
 tag: $post-card-ui.tag
+body: $post-card-ui.body
 
 -- end: ftd.desktop
 
@@ -719,66 +712,68 @@ optional common.author-meta author:
 optional ftd.image-src image:
 optional string url:
 optional string tag:
+optional body body:
 boolean $mouse-in: false
 
 -- ftd.column:
-background.solid: $inherited.colors.background.overlay
-width.fixed.px: 357
+background.solid: $inherited.colors.background.step-1
+width.fixed.px: 380
 role: $inherited.types.copy-small
 color: $inherited.colors.cta-primary.text
 margin-top.px: 24
 margin-bottom.px: 32
-spacing.fixed.px: 12
+spacing.fixed.px: 22
 border-radius.px: 20
-padding.px: 12
-background.solid if { post-card-ui-desktop.mouse-in }: $inherited.colors.cta-secondary.hover
+shadow if { post-card-ui-desktop.mouse-in }: $shadow
 $on-mouse-enter$: $ftd.set-bool($a = $post-card-ui-desktop.mouse-in, v = true)
 $on-mouse-leave$: $ftd.set-bool($a = $post-card-ui-desktop.mouse-in, v = false)
-border-width.px if { post-card-ui-desktop.mouse-in }: 1
-border-color if { post-card-ui-desktop.mouse-in }: $inherited.colors.cta-danger.border
 
 -- ftd.image:
 src: $post-card-ui-desktop.image
 width: fill-container
 height.fixed.px: 220
 border-radius.px: 8
-border-width.px: 1
-border-color: $inherited.colors.cta-danger.border
 link: $post-card-ui-desktop.url
+
+-- ftd.column:
+padding-horizontal.px: 12
+spacing.fixed.px: 16
+
+-- ftd.text: $post-card-ui-desktop.tag
+role: $inherited.types.copy-small
+color: $inherited.colors.cta-primary.text
+background.solid: $inherited.colors.cta-primary.base
+padding-horizontal.px: 8
+style: bold
 
 -- ftd.text: $post-card-ui-desktop.title
 role: $inherited.types.heading-tiny
 color: $inherited.colors.text-strong
 link: $post-card-ui-desktop.url
 
--- ftd.row:
-spacing.fixed.px: 8
+-- ftd.text:
+if: { post-card-ui-desktop.body != NULL }
+role: $inherited.types.copy-regular
+color: $inherited.colors.text
 
--- ftd.text: by
-
--- ftd.text: $post-card-ui-desktop.author.title
-
--- end: ftd.row
+$post-card-ui-desktop.body
 
 -- ftd.row:
 padding-vertical.px: 16
-padding-horizontal.px: 4
 spacing.fixed.px: 32
-border-top-width.px: 1
-border-top-color: $inherited.colors.border
 width: fill-container
-
--- ftd.text: $post-card-ui-desktop.tag
-style: bold
-color: $inherited.colors.cta-danger.text
+align-self: center
 
 -- ftd.row:
-border-right-width.px: 1
-border-right-color: $inherited.colors.border
-height.fixed.px: 60
-left.px: 130
-bottom.px: -4
-anchor: parent
+spacing.fixed.px: 8
+align-content: center
+
+-- ftd.image:
+src: $post-card-ui-desktop.author.image
+width.fixed.px: 24
+height.fixed.px: 24
+
+-- ftd.text: $post-card-ui-desktop.author.title
 
 -- end: ftd.row
 
@@ -797,6 +792,8 @@ if: { post-card-ui-desktop.timestamp != NULL }
 -- end: ftd.row
 
 -- end: ftd.row
+
+-- end: ftd.column
 
 -- end: ftd.column
 
@@ -906,23 +903,42 @@ if: { post-card-ui-mobile.timestamp != NULL }
 
 -- component search-card:
 
--- ftd.column:
-margin-top.px: 12
-padding.px: 12
-border-radius.px: 16
+-- ftd.row:
+margin-top.px: 34
+padding-left.px: 12
+border-radius.px: 8
+spacing: space-between
 background.solid: $inherited.colors.background.step-1
 
 -- ftd.text-input:
 placeholder: Search
-padding-vertical.px: 4
+padding-vertical.px: 28
 padding-vertical.px if { ftd.device == "mobile" }: 14
 padding-horizontal.px: 8
-width.fixed.px: 250
+width.fixed.px: 600
+height.fixed.px: 34
 width.fixed.px if { ftd.device == "mobile" }: 300
 type: text
 background.solid: $inherited.colors.background.step-1
 
+-- ftd.column:
+width.fixed.px: 84
+height.fixed.px: 28
+padding-vertical.px: 28
+border-radius.px: 8
+padding-horizontal.px: 8
+align-content: center
+background.solid: $inherited.colors.background.step-2
+cursor: pointer
+
+-- ftd.image:
+src: $assets.files.assets.search.svg
+width.fixed.px: 38
+height.fixed.px: 38
+
 -- end: ftd.column
+
+-- end: ftd.row
 
 -- end: search-card
 
@@ -936,7 +952,7 @@ background.solid: $inherited.colors.background.step-1
 
 
 -- component topic:
-caption title:
+optional caption title:
 common.tags-list list topics:
 
 -- ftd.column:
@@ -970,16 +986,19 @@ topics: $topic.topics
 
 
 -- component topic-desktop:
-caption title:
+optional caption title:
 common.tags-list list topics:
 
 -- ftd.column:
+margin-top.px: 54
+align-content: center
 padding-vertical.px: 8
 width: fill-container
 spacing.fixed.px: 12
 
 -- ftd.text: $topic-desktop.title
-role: $inherited.types.copy-small
+if: { topic-desktop.title != NULL }
+role: $inherited.types.copy-large
 color: $inherited.colors.text
 style: semi-bold
 
@@ -1009,7 +1028,7 @@ tag-link: $obj.tag-link
 
 
 -- component topic-mobile:
-caption title:
+optional caption title:
 common.tags-list list topics:
 
 -- ftd.column:
@@ -1018,6 +1037,7 @@ width: fill-container
 spacing.fixed.px: 24
 
 -- ftd.text: $topic-mobile.title
+if: { topic-mobile.title != NULL }
 role: $inherited.types.copy-large
 color: $inherited.colors.text
 
@@ -1053,19 +1073,21 @@ boolean $mouse-in: false
 -- ftd.row:
 spacing.fixed.px: 32
 background.solid: $inherited.colors.background.step-1
-background.solid if { topics-detail.mouse-in }: $inherited.colors.cta-primary.hover
+border-width.px: 1
+border-color: $inherited.colors.border
+background.solid if { topics-detail.mouse-in }: $inherited.colors.border
 $on-mouse-enter$: $ftd.set-bool($a = $topics-detail.mouse-in, v = true)
 $on-mouse-leave$: $ftd.set-bool($a = $topics-detail.mouse-in, v = false)
 height: hug-content
-border-radius.px: 30
+border-radius.px: 8
 padding-vertical.px: 12
 padding-horizontal.px: 12
+link: $topics-detail.tag-link
 
 -- ftd.text: $topics-detail.title
 role: $inherited.types.copy-small
 color: $inherited.colors.cta-primary.text
 color if { topics-detail.mouse-in }: $inherited.colors.text-strong
-link: $topics-detail.tag-link
 style: semi-bold
 
 -- end: ftd.row
@@ -1828,3 +1850,18 @@ color: $inherited.colors.cta-primary.border
 -- end: ftd.column
 
 -- end: without-image-card
+
+
+
+
+
+-- ftd.shadow shadow:
+color: $shadow-color
+x-offset.px: 0
+y-offset.px: 2
+blur.px: 8
+inset-body: false
+
+-- ftd.color shadow-color:
+light: #00000026
+dark: #f6f5f557
